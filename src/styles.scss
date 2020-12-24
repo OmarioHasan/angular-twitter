@@ -1,0 +1,85 @@
+/*
+----------------------------------------------------------------------------
+---------------------        Styles Table Guide        ---------------------
+----------------------------------------------------------------------------
+---------------------  1 - Global Styles And Variable  ---------------------
+----------------------------------------------------------------------------
+---------------------        2 - Search Table          ---------------------
+----------------------------------------------------------------------------
+*/
+
+// ------------------   1 - Global Styles And Variables   ------------------
+
+:root {
+  --gray: #f8f8fa;
+  --gray-dark: #8e8e8e;
+  --blue: #1da1f2;
+  --black: #333;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+body {
+  padding: 30px;
+}
+header {
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+// ---------------------        2 - Search Table          ---------------------
+
+.table {
+  &__controls {
+    margin-top: 30px;
+    padding: 0 20px;
+    a {
+      margin: 0 5px;
+      padding: 10px;
+      display: inline-block;
+      &.active {
+        color: var(--blue);
+        background: var(--gray);
+      }
+    }
+  }
+  &__body {
+    background: var(--gray);
+    padding: 20px;
+    min-height: calc(100vh - 208px);
+    border-radius: 5px;
+    h5 {
+      color: var(--gray-dark);
+      margin: 0;
+    }
+    &--search {
+      position: relative;
+      margin-top: 10px;
+      input {
+        border: 1px solid var(--gray-dark);
+        padding: 7px 15px;
+        width: 200px;
+        transition: all 0.2s;
+        border-radius: 5px;
+        &.enlarge {
+          width: 300px;
+        }
+      }
+      img {
+        position: absolute;
+        width: 18px;
+        top: 50%;
+        transform: translate(-30px, -50%);
+      }
+    }
+  }
+}

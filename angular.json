@@ -5,7 +5,11 @@
   "projects": {
     "angular-twitter": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -87,7 +91,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -120,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "angular-twitter"
+  "defaultProject": "angular-twitter",
+  "cli": {
+    "analytics": "12ad8fd1-d32b-4f9e-b89c-5dd72682dc4c"
+  }
 }

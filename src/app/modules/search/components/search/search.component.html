@@ -1,0 +1,13 @@
+<h5>{{ pageName | titlecase }} search</h5>
+<div class="table__body--search">
+  <input
+    type="text"
+    [placeholder]="'Search by ' + pageName | titlecase"
+    #searchRef
+    (keyup)="searchTerm.next(searchRef.value)"
+    [class]="searchFocus ? 'enlarge' : ''"
+    (focus)="searchFocus = true"
+    (blur)="searchFocus = false"
+  />
+  <img src="assets/svg/search.svg" alt="" />
+</div>
