@@ -36,6 +36,9 @@
         </td>
         <td>{{ tweet.date | date }}</td>
       </tr>
+      <tr *ngIf="notFound" class="text-center">
+        <td colspan="7">{{ errMessage }}</td>
+      </tr>
     </tbody>
   </table>
   <ul class="pagination" *ngIf="tweets.length > 10">

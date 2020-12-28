@@ -8,10 +8,6 @@ import {
 } from '@angular/animations';
 export const ListAnimation = trigger('listAnimation', [
   transition('* => *', [
-    // each time the binding value changes
-    query(':leave', [stagger(100, [animate('0.5s', style({ opacity: 0 }))])], {
-      optional: true,
-    }),
     query(
       ':enter',
       [
